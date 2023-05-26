@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mydata</title>
+</head>
+<body>
+<form action="#" method="post">
+    {% csrf_token %}
+{% for stud in mydata1 %}
+<input type="text" name="username" id="" placeholder="{{stud.username}}" value="{{stud.username}}">
+<input type="email" name="email" id="" placeholder="{{stud.email}}" value="{{stud.email}}">
+<input type="number" name="contact" id="" placeholder="{{stud.contact}}" value="{{stud.contact}}">
+<input type="text" name="address" id="" placeholder="{{stud.address}}" value="{{stud.address}}">
+<input type="text" name="password" id="" placeholder="{{stud.password}}" value="{{stud.password}}">
+<input type="submit" value="submit">
+</form>
+{{stud.username}}
+{{stud.email}}
+{{stud.contact}}
+{{stud.address}}
+{{stud.password}}
+  {% endfor %}
+</body>
+</html>
